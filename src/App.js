@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+/* eslint-disable react/jsx-no-undef */
 import './App.css';
+import ClassComponent from './components/ClassComponent';
+import FunctionComponent from './components/FunctionComponent';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>Convidado: </h3>
+      <ClassComponent nome="Luciane" estaNaLista={true} />
+      <ClassComponent nome="Juliana" estaNaLista={true} />
+      <ClassComponent nome="Carla" estaNaLista={false} />
+      <ClassComponent nome="Bruna" estaNaLista={true} />
+      <h3>Tarefas: </h3>
+      <FunctionComponent nome="Luciane" tarefa="cerveja" />
+      <FunctionComponent nome="Juliana" tarefa="pizza" />
+      <FunctionComponent nome="Carla" tarefa="bolo" />
+      <FunctionComponent nome="Bruna" tarefa="refrigerante" />
     </div>
   );
 }
